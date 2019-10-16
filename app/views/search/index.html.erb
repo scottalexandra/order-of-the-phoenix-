@@ -1,14 +1,14 @@
-<h1><%= facade.member_count %> Members for <%= @house %></h1>
+<h1><%= facade.member_count %> Members for <%= facade.house %></h1>
 
 <section class="members">
-  <% @members.each do |member| %>
-  <section class="member">
-    <h3 class="name"><%= member.name%></h3>
-    <ul>
-      <li class="role"><%= member.role %></li>
-      <li class="house"><%= member.house%></li>
-      <li class="patronus"><%= member.patronus %></li>
-    </ul>
-  </section>
+  <% facade.members_by_house.each do |member| %>
+    <section class="member">
+      <h3 class="name"><%= member.name%></h3>
+      <ul>
+        <li class="role"><%= member.role %></li>
+        <li class="house"><%= member.house%></li>
+        <li class="patronus"><%= member.patronus %></li>
+      </ul>
+    </section>
   <% end %>
 </section>

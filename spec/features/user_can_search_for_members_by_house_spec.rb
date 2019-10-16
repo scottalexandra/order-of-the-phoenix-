@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe "user can search for members" do
+describe "user can search for members", :vcr do
   scenario "by house" do
     visit '/'
     select "Gryffindor", from: :house
